@@ -15,7 +15,7 @@
 baseURL = "https://wisblue.github.io"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
-title = "Hugo tranquilpeak theme"
+title = "我的学习笔记"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
@@ -35,11 +35,11 @@ canonifyurls = true
 
 [author]
   name = "wisblue"
-  bio = "Super bio with markdown support **COOL**"
+  bio = "我的学习笔记"
   job = "Your job title"
-  location = "France"
+  location = "中国 China"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "thibaud.lepretre@gmail.com"
+  gravatarEmail = "wisblue@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
@@ -85,13 +85,7 @@ canonifyurls = true
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/kakawait"
-[[menu.links]]
-  weight = 2
-  identifier = "stackoverflow"
-  name = "Stack Overflow"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-  url = "https://stackoverflow.com/users/636472/kakawait"
+  url = "https://github.com/wisblue"
 
 [[menu.misc]]
   weight = 1
@@ -121,7 +115,7 @@ canonifyurls = true
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  description = "我的学习笔记"
 
   # Customization
   # Define the behavior of the sidebar
