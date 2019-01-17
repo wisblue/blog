@@ -36,7 +36,7 @@ canonifyurls = true
 [author]
   name = "wisblue"
   bio = "我的学习笔记"
-  job = "Your job title"
+  job = "学习中成长"
   location = "中国 China"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "wisblue@gmail.com"
@@ -207,6 +207,6 @@ canonifyurls = true
   # [params.sidebar.profile]
   #   url = "/#about"
 
-  # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
+  # Customize copyright value "© 2019 <CUSTOMIZATION>. All Rights Reserved"
   # [params.footer]
-  #   copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
+  #   copyright = "<a href=\"https://github.com/wisblue\">wisblue</a>"
