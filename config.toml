@@ -39,7 +39,7 @@ canonifyurls = true
   job = "wisblue@gmail.com"
   location = "中国 China"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "wisblue@gmail.com"
+  # gravatarEmail = "wisblue@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "/head.png"
