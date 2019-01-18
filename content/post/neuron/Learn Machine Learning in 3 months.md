@@ -35,7 +35,7 @@ steps and resources to learning machine learning in 3 months. According to the y
 
   - ##### Linear Algebra 
 
-    - MIT: https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/ by Prof. Gilbert Strang
+    - MIT: https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/ by Prof. Gilbert Strang
     - Linear algebra explained in four pages: https://www.souravsengupta.com/cds2016/lectures/Savov_Notes.pdf
 
   - ##### Calculus: 
