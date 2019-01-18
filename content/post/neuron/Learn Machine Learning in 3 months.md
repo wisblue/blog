@@ -11,7 +11,7 @@ thumbnailImagePosition: left
 thumbnailImage: /img/ml/learn machine learning in 3 months.png
 ---
 
-steps and resources to learning machine learning in 3 months. According to the video by Siraj Raval, at https://www.youtube.com/watch?v=Cr6VqTRO1v0.
+steps and resources to learning machine learning in 3 months. According to the youtube video by Siraj Raval.
 <!--more-->
 
 {{< youtube id="Cr6VqTRO1v0" autoplay="false" >}}
