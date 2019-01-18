@@ -1,7 +1,7 @@
 #!/bin/bash -x
 hugo -d ../wisblue.github.io
 git add .
-echo "Enter commit message: "
+echo -e "\033[38;5;46mEnter commit message: \033[38;5;7m"
 read commitMessage
 git commit -m "$commitMessage"
 git push
