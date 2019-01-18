@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on 我的学习笔记</title>
+    <link>https://wisblue.github.io/categories/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on 我的学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 17 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wisblue.github.io/categories/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大道至简的“贝叶斯定理”</title>
+      <link>https://wisblue.github.io/2019/01/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80%E7%9A%84%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80%E7%9A%84%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/</guid>
+      <description>&lt;p&gt;本文试图给出贝叶斯定理的直观理解和部分相关应用场景。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>独立事件</title>
+      <link>https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/</guid>
+      <description>&lt;p&gt;本文试图浅显易懂地阐述独立事件的基本概念。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>直线法线式方程的几何证明</title>
+      <link>https://wisblue.github.io/2019/01/%E7%9B%B4%E7%BA%BF%E6%B3%95%E7%BA%BF%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E4%BD%95%E8%AF%81%E6%98%8E/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E7%9B%B4%E7%BA%BF%E6%B3%95%E7%BA%BF%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E4%BD%95%E8%AF%81%E6%98%8E/</guid>
+      <description>&lt;p&gt;直线法线式方程百度百科上的公式推导过于繁琐，不够直观。
+这里给出法线式 x * cosθ + y * sinθ - d = 0 的几何证明。并推广到n维超平面。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

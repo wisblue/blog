@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>人工智能 on 我的学习笔记</title>
+    <link>https://wisblue.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
+    <description>Recent content in 人工智能 on 我的学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wisblue.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>重读《意识的宇宙》</title>
+      <link>https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/</guid>
+      <description>&lt;p&gt;重新学习《意识的宇宙》，了解神经元工作方式。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

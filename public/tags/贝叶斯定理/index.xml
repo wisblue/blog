@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>贝叶斯定理 on 我的学习笔记</title>
+    <link>https://wisblue.github.io/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/</link>
+    <description>Recent content in 贝叶斯定理 on 我的学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 17 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wisblue.github.io/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大道至简的“贝叶斯定理”</title>
+      <link>https://wisblue.github.io/2019/01/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80%E7%9A%84%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80%E7%9A%84%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/</guid>
+      <description>&lt;p&gt;本文试图给出贝叶斯定理的直观理解和部分相关应用场景。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>独立事件</title>
+      <link>https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/</link>
+      <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/</guid>
+      <description>&lt;p&gt;本文试图浅显易懂地阐述独立事件的基本概念。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

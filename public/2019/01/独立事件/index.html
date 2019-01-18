@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.52-DEV with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="wisblue">
+<meta name="keywords" content="">
+<meta name="description" content="本文试图浅显易懂地阐述独立事件的基本概念。">
+
+
+<meta property="og:description" content="本文试图浅显易懂地阐述独立事件的基本概念。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="独立事件">
+<meta name="twitter:title" content="独立事件">
+<meta property="og:url" content="https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+<meta property="twitter:url" content="https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+<meta property="og:site_name" content="我的学习笔记">
+<meta property="og:description" content="本文试图浅显易懂地阐述独立事件的基本概念。">
+<meta name="twitter:description" content="本文试图浅显易懂地阐述独立事件的基本概念。">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-01-17T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-01-17T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="数学">
+    
+      <meta property="article:section" content="概率">
+    
+  
+  
+    
+      <meta property="article:tag" content="独立事件">
+    
+      <meta property="article:tag" content="贝叶斯定理">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="http://1852.img.pp.sohu.com.cn/images/2012/11/2/14/14/e35782436_13b83a0222bg85.png">
+  <meta property="twitter:image" content="http://1852.img.pp.sohu.com.cn/images/2012/11/2/14/14/e35782436_13b83a0222bg85.png">
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/5817bd64a873a74023f7c8150d4e937e?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/5817bd64a873a74023f7c8150d4e937e?s=640">
+
+
+    <title>独立事件</title>
+
+    <link rel="icon" href="https://wisblue.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://wisblue.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://wisblue.github.io/">我的学习笔记</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://wisblue.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/5817bd64a873a74023f7c8150d4e937e?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://wisblue.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/5817bd64a873a74023f7c8150d4e937e?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">wisblue</h4>
+        
+          <h5 class="sidebar-profile-bio">我的学习笔记</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/wisblue" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://wisblue.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      独立事件
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-17T00:00:00Z">
+        
+  一月 17, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/%e6%95%b0%e5%ad%a6">数学</a>, 
+    
+      <a class="category-link" href="https://wisblue.github.io/categories/%e6%a6%82%e7%8e%87">概率</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>本文试图浅显易懂地阐述独立事件的基本概念。</p>
+
+<ul>
+<li>在同一个样本空间里的两次试验，第一次试验对第二次试验的结果没有影响，因此这两次事件相互独立。</li>
+</ul>
+
+<p>比如，样本空间为气球，第一次统计谁生成的，第二次统计气球的颜色分布，因此两次事件相互独立。</p>
+
+<ul>
+<li>或者两次独立的试验，比如两次掷骰子，或一次掷骰子，一次掷硬币。</li>
+</ul>
+
+<p><strong>相互独立是设A,B是两事件,如果满足等式P(A∩B)=P(AB)=P(A)P(B),则称事件A,B相互独立,简称A,B独立.</strong></p>
+
+<p>设A,B是试验E的两个事件,若P(A)&gt;0,可以定义P(B∣A).一般,A的发生对B发生的<a href="https://baike.baidu.com/item/%E6%A6%82%E7%8E%87">概率</a>是有影响的,所以<a href="https://baike.baidu.com/item/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87">条件概率</a>P(B∣A)≠P(B),而只有当A的发生对B发生的概率没有影响的时候（即A与B相互独立）才有条件概率P(B∣A)=P(B).这时,由<a href="https://baike.baidu.com/item/%E4%B9%98%E6%B3%95%E5%AE%9A%E7%90%86">乘法定理</a>P(A∩B)=P(B∣A)P(A)=P(A)P(B).</p>
+
+<p>因此</p>
+
+<p><strong>定义:设A,B是两事件,如果满足等式P(A∩B)=P(AB)=P(A)P(B),则称事件A,B相互独立,简称A,B独立.</strong></p>
+
+<p>注:1.P(A∩B)就是P(AB)</p>
+
+<p>2.若P(A)&gt;0,P(B)&gt;0则A,B相互独立与A,B互不相容不能同时成立,即独立必相容,互斥必联系.</p>
+
+<p>容易推广:设A,B,C是三个事件,如果满足P(AB)=P(A)P(B),P(BC)=P(B)P&copy;,P(AC)=P(A)P&copy;,P(ABC)=P(A)P(B)P&copy;,则称事件A,B,C<strong>相互独立</strong></p>
+
+<p>更一般的定义是,A1,A2,……,An是n(n≥2)个事件,如果对于其中任意2个,任意3个,…任意n个事件的积事件的<a href="https://baike.baidu.com/item/%E6%A6%82%E7%8E%87">概率</a>,都等于各个事件概率之积,则称事件A1,A2,……,An<strong>相互独立</strong></p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">独立事件</a>
+
+  <a class="tag tag--primary tag--small" href="https://wisblue.github.io/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/">贝叶斯定理</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80%E7%9A%84%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/" data-tooltip="大道至简的“贝叶斯定理”">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E7%9B%B4%E7%BA%BF%E6%B3%95%E7%BA%BF%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E4%BD%95%E8%AF%81%E6%98%8E/" data-tooltip="直线法线式方程的几何证明">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80%E7%9A%84%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/" data-tooltip="大道至简的“贝叶斯定理”">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://wisblue.github.io/2019/01/%E7%9B%B4%E7%BA%BF%E6%B3%95%E7%BA%BF%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E4%BD%95%E8%AF%81%E6%98%8E/" data-tooltip="直线法线式方程的几何证明">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%258B%25AC%25E7%25AB%258B%25E4%25BA%258B%25E4%25BB%25B6%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%258B%25AC%25E7%25AB%258B%25E4%25BA%258B%25E4%25BB%25B6%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwisblue.github.io%2F2019%2F01%2F%25E7%258B%25AC%25E7%25AB%258B%25E4%25BA%258B%25E4%25BB%25B6%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/5817bd64a873a74023f7c8150d4e937e?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">wisblue</h4>
+    
+      <div id="about-card-bio">我的学习笔记</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        学习中成长
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        中国 China
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="搜索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E9%87%8D%E8%AF%BB%E6%84%8F%E8%AF%86%E7%9A%84%E5%AE%87%E5%AE%99/">
+                <h3 class="media-heading">重读《意识的宇宙》</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>重新学习《意识的宇宙》，了解神经元工作方式。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E5%A4%A7%E9%81%93%E8%87%B3%E7%AE%80%E7%9A%84%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/">
+                <h3 class="media-heading">大道至简的“贝叶斯定理”</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本文试图给出贝叶斯定理的直观理解和部分相关应用场景。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6/">
+                <h3 class="media-heading">独立事件</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本文试图浅显易懂地阐述独立事件的基本概念。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E7%9B%B4%E7%BA%BF%E6%B3%95%E7%BA%BF%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%87%A0%E4%BD%95%E8%AF%81%E6%98%8E/">
+                <h3 class="media-heading">直线法线式方程的几何证明</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>直线法线式方程百度百科上的公式推导过于繁琐，不够直观。
+这里给出法线式 x * cosθ + y * sinθ - d = 0 的几何证明。并推广到n维超平面。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://wisblue.github.io/2019/01/%E8%AE%A1%E7%AE%97%CF%80%E7%9A%84%E5%9C%9F%E5%8A%9E%E6%B3%95/">
+                <h3 class="media-heading">计算π的“土办法”</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本文以计算机方法计算π值为例，作为总结计算思维方法的尝试。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         5 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://wisblue.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://wisblue.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/wisblue.github.io\/2019\/01\/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6\/';
+          
+            this.page.identifier = '\/2019\/01\/%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
