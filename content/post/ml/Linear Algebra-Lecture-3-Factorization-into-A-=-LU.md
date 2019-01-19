@@ -1,5 +1,5 @@
 ---
-title: "Algebra Lecture 3: Factorization into A = LU"
+title: "Linear Algebra Lecture 3: Multiplication and inverse matrices"
 date: 2019-01-19
 categories:
 - Math
@@ -97,10 +97,10 @@ A =
     1 & 3   \\\\\\
     2 & 6 
     \end{bmatrix}
-  $$
+$$
   because I can't find vector x with Ax = 0.
-  
-### Gauss-Jordan: find `$A^{-1}$`
+
+### Gauss-Jordan: find `$A^{-1}### 
 $$
 \begin{bmatrix}
     1 & 3   \\\\\\
@@ -154,24 +154,25 @@ Let's bring them together and do the elimations:
 
 $$ \left[
 \begin{array}{cc|cc}
-    1 & 3 & 1 & 0  \\\\\\
-    2 & 7 & 0 & 1
+​    1 & 3 & 1 & 0  \\\\\\
+​    2 & 7 & 0 & 1
 \end{array}
 \right]
 -> \left[
 \begin{array}{cc|cc}
-    1 & 3 & 1 & 0  \\\\\\
-    0 & 1 & -2 & 2
+​    1 & 3 & 1 & 0  \\\\\\
+​    0 & 1 & -2 & 2
 \end{array}
 \right] 
 ->
  \left[
 \begin{array}{cc|cc}
-    1 & 0 & 7 & -3  \\\\\\
-    0 & 1 & -2 &1
+​    1 & 0 & 7 & -3  \\\\\\
+​    0 & 1 & -2 &1
 \end{array}
 \right] 
 $$
+
 $$
 A \qquad I \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad I \qquad\qquad A
 $$
