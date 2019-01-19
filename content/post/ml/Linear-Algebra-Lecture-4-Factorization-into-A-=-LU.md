@@ -40,11 +40,7 @@ $$
 </div>
 <div>
 $$
-    \begin{bmatrix}
-     1 & 0   \\\\\\
-     -1 & 1
-    \end{bmatrix}
-	\begin{bmatrix}
+  	\begin{bmatrix}
     2 & 1   \\\\\\
     8 & 7 
     \end{bmatrix}
@@ -141,15 +137,17 @@ $$
 
 A = LU
 
-If now row exchanges, mutipliers go directly into L
+##### If no row exchanges, mutipliers go directly into L
 
 How many elimations operations on n x n matrix A?
 
 Typical is multiply and substract.
 first step for first row cost about 99x99 steps, second would cost 98x98 steps....
 We can count it as 
+
 <div>$$n^2 + (n-1)^2 + ... + 3^2 + 2^2 +1^2 \approx \frac {1}{3}n^3 $$</div>
 
 #### Permutation
 
-$$P^{-1}= P^T​$$
+$$P^{-1}= P^T$$
+
