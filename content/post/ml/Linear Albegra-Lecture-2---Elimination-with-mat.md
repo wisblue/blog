@@ -1,11 +1,11 @@
 ---
-title: Albegra Lecture 2 - Elimination with matrices
+title: Linear Albegra Lecture 2 - Elimination with matrices
 date: 2019-01-18
 categories:
 - Math
-- Algebra
+- Linear Algebra
 tags:
-- Algebra
+- Linear Algebra
 - Math
 thumbnailImagePosition: left
 thumbnailImage: /img/ml/algebra-1-2019-01-18.png

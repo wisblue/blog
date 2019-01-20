@@ -1,11 +1,11 @@
 ---
-title: Albegra Lecture 1 - Geometry of Linear Equations
+title: Linear Albegra Lecture 1 - Geometry of Linear Equations
 date: 2019-01-18
 categories:
 - Math
-- Algebra
+- Linear Algebra
 tags:
-- Algebra
+- Linear Algebra
 - Math
 thumbnailImagePosition: left
 thumbnailImage: /img/ml/algebra-1-2019-01-18.png
