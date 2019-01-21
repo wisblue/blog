@@ -5,10 +5,10 @@ categories:
 - AI
 - TensorFlow
 tags:
-- TensorFlow1
+- TensorFlow
 - AI
 thumbnailImagePosition: left
-thumbnailImage: http://1852.img.pp.sohu.com.cn/images/2012/11/2/14/14/e35782436_13b83a0222bg85.png
+thumbnailImage: /img/ml/tensorflow.jpg
 ---
 
 Steps to learn TensorFlow, from [Quora](https://www.quora.com/Where-can-I-start-learning-how-to-use-TensorFlow)
