@@ -57,6 +57,7 @@ credit: https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutoria
 | | \alpha`, \beta`, …, `\omega | $\alpha \beta \omega$ |
 | | `\Gamma`, `\Delta`, …, `\Omega`: $\Gamma, \Delta, …, \Omega | $\Gamma, \Delta, …, \Omega$ |
 | 度数 | 45^\circ | $45^\circ$ |
+| 颜色 | \color{red}1 | $\color{red}1$ |
 
 ##### 矩阵中竖线
 ```
