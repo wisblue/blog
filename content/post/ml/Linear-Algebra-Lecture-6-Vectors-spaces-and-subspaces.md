@@ -167,3 +167,6 @@ So X does not form a subspace.
 
 - ​	<u>columns space: few vectors makes a subsoace</u>
 - ​	<u>the equations has to be satisfied also defines a subspace</u>
+
+
+

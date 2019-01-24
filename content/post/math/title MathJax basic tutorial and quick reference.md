@@ -5,6 +5,7 @@ categories:
 - Math
 tags:
 - Math
+- MathJax
 thumbnailImagePosition: left
 thumbnailImage: /img/math/mathjax.png
 ---
@@ -58,6 +59,7 @@ credit: https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutoria
 | | `\Gamma`, `\Delta`, …, `\Omega`: $\Gamma, \Delta, …, \Omega | $\Gamma, \Delta, …, \Omega$ |
 | 度数 | 45^\circ | $45^\circ$ |
 | 颜色 | \color{red}1 | $\color{red}1$ |
+| 加重 | c \textbf{v} + d \textbf{w} | $c \textbf{v} + d \textbf{w}$ |
 
 ##### 矩阵中竖线
 ```
