@@ -12,6 +12,17 @@ thumbnailImage: /img/Screen Shot 2019-01-26 09.25.27.jpg
 ---
 
 **Gram**－**Schmidt**正交化提供了一种方法，能够通过这一子空间上的一个基得出子空间的一个正交基，并可进一步求出对应的标准正交基。
+
+`$$
+\bbox[yellow,5px]{
+  q_i^T \cdot q_j = 
+  	\begin{cases}
+        0 , 当i \ne j\\\\\\
+        1, 当i = j
+  	\end{cases}
+  }
+$$
+$$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$`
 <!--more-->
 
 ![](/img/Screen Shot 2019-01-26 09.25.27.jpg)
@@ -85,9 +96,9 @@ $$
 现在找到C垂直于A和B, 也就是C减去A方向的分量和B方向的分量:
 $$
 C = c - \frac{A^Tc}{A^TA}A - \frac {B^Tc}{B^TB}B
-$$$$
+
 例题：格拉姆-施密特方法计算单位正交矩阵
-$$$$
+
 a = \begin{bmatrix} 
 1 \\\\\\
 1 \\\\\\
@@ -127,7 +138,6 @@ A^TB =
 1
 \end{bmatrix} = 0, 正确
 $
-
 $$
 最终得到单位正交矩阵 Q = 
 \begin{bmatrix}
