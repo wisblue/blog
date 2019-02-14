@@ -23,6 +23,8 @@ or all vector linear combations cv + dw are in the space
 
 #### Subspace
 
+**子空间的定义：1. 必须过零点， 2 线性组合仍然在此子空间内。**
+
 Plane through (0 0 0) is a subspace - P
 
 Line through (0 0 0) is a subspace L
@@ -40,6 +42,14 @@ Generally Subspace S and T, $S \cap T$ is subspace.
 #### Example
 
 Columne space of A, A is subspace of $R^4$
+
+举一个非独立矩阵的例子， 下面的例子，
+
+这个矩阵含有3个4维向量， 第3列向量是前两列的线性组合， 是没有用的。。所以它的列空间（列向量的线性组合）不能长成整个4维空间。
+
+所以对于b不为零，是不是都有解，但解不是子空间，因为他的解构成的子空间不通过0
+
+
 $$
 A = 
 \begin{bmatrix}
@@ -104,6 +114,20 @@ And **A is 2-D subspace of $R^4$**
 
 ## Null Space
 
+所有x使得Ax=0所构成的空间叫做零空间。
+
+找出符合条件的x， 上面的例子，x很好找，比如（1， 1， -1）， 那么$\lambda x $ 都是Ax=0的解，$\lambda x $ 为矩阵A的零空间。
+
+因为$\lambda x $ 经过A的变换都变成零向量了。
+
+
+
+
+
+
+
+
+
 all solutions
 $
 X = 
@@ -148,12 +172,18 @@ $ would be the solution.
 
 think of geometry , null space is line through zero.
 
-Check the solutuons to Ax = 0 always givce a subspace.
+Check the solutions to Ax = 0 always givce a subspace.
 
-**If Av = 0 , and Aw = 0. then A(v+w) = 0**
+**然后证明$\lambda x $ 符合子空间定义**。
+
+If Av = 0 , and Aw = 0. then A(v+w) = 0**
 because A(v+w) = Av + Aw
 
 and A(12V) = 0 becuase A(12v) = 12Av
+
+
+
+**然后说明哪些不构成子空间， 重点在强调子空间的定义的第一点：必须过原点。**
 
 ##### Do the X solutions form a subspace when b is not zero? No
 because zero does not solve the solution, [1 0 0] is solution [0 -1 1].
@@ -165,7 +195,7 @@ So X does not form a subspace.
 
 **Essential of Subspace :**
 
-- ​	<u>columns space: few vectors makes a subsoace</u>
+- ​	<u>columns space: few vectors makes a subspace</u>
 - ​	<u>the equations has to be satisfied also defines a subspace</u>
 
 

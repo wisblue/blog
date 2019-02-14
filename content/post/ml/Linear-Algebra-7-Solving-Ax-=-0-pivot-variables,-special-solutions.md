@@ -13,7 +13,20 @@ thumbnailImage: /img/ml/null space.jpg
 ---
 
 Ax=b and null space.
+
+本讲继续上一讲，通过消元法，进一步阐述零空间的求解。A的特解为
+
+$$N=x = c \begin{bmatrix} -F \\\\\\ I \end{bmatrix}$$
+
 <!--more-->
+
+总结：
+
+通过消元法，矩阵变成阶梯型矩阵R=rref(A)。
+
+进一步对上三角进行消元，然后把主元归于I，自由向量归于F，则A的特解为
+
+$$N=x = c \begin{bmatrix} -F \\\\\\ I \end{bmatrix}$$
 
 What's the algorithm so solve Ax=b?
 
