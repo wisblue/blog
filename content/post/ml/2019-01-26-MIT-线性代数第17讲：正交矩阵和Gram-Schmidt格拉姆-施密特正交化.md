@@ -23,6 +23,7 @@ thumbnailImage: /img/Screen Shot 2019-01-26 09.25.27.jpg
   }
 $$
 $$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$`
+
 <!--more-->
 
 ![](/img/Screen Shot 2019-01-26 09.25.27.jpg)
@@ -30,7 +31,7 @@ $$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$`
 # Orthonormal - 规划正交向量
 
 - 定义
-  $$
+$$
   \bbox[yellow,5px]{
   q_i^T \cdot q_j = 
   	\begin{cases}
@@ -38,8 +39,7 @@ $$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$`
         1, 当i = j
   	\end{cases}
   }
-  $$
-
+$$
 - 依据上述定义， 把q向量作为矩阵的列$$Q^TQ=\begin {bmatrix} q_1^T \\\\\\ ... \\\\\\ q_n^T \end{bmatrix}$$
 
 于是$$Q^TQ=\begin {bmatrix} q_1^T \\\\\\ ... \\\\\\ q_n^T \end{bmatrix}\begin {bmatrix} q_1 & ... & q_n \end{bmatrix}=\begin {bmatrix} 1 & 0 & 0 \\\\\\ 0 & 1 & 0 \\\\\\ 0 & 0 & 1 \end{bmatrix} = I$$
@@ -96,9 +96,10 @@ $$
 现在找到C垂直于A和B, 也就是C减去A方向的分量和B方向的分量:
 $$
 C = c - \frac{A^Tc}{A^TA}A - \frac {B^Tc}{B^TB}B
+$$
 
 例题：格拉姆-施密特方法计算单位正交矩阵
-
+$$
 a = \begin{bmatrix} 
 1 \\\\\\
 1 \\\\\\
@@ -152,7 +153,6 @@ q_1 & q_2
 \frac {1}{\sqrt 3} & \frac{1}{\sqrt 2} 
 \end{bmatrix} 
 $$
-
 # A=QR的因式分解
 
 上面我们有a，b， c构成的矩阵A用Gram-Schmidt方法计算得到向量为q1, q1, q3的单位正交矩阵。因此， 一定有某个矩阵是的A=QR。
@@ -170,7 +170,6 @@ q_1^Ta & q_1^Tb & q_1^c \\\\\\
        &		& q_3^c 
 \end{bmatrix} 
 $$
-
 # 单位正交矩阵对最小二乘法的简化
 A = QR 推得
 $
