@@ -28,7 +28,7 @@ $$\bbox[yellow,5px] {\hat x_i = q_i^T b}$$`
 
 ![](/img/Screen Shot 2019-01-26 09.25.27.jpg)
 
-# Orthonormal - 规划正交向量
+# Orthonormal - 规范正交向量
 
 - 定义
 $$
